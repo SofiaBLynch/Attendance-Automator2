@@ -10,3 +10,12 @@ h1
     font-family:'Times New Roman';
     text-align:center;
 }
+form
+{
+    padding:50px;
+    background-color:slategray
+}
+label
+{
+    color:white;
+}
