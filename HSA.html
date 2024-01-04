@@ -9,13 +9,17 @@
     <body>
         <script src="./src/main.js"></script>
         
+        <div class="header" style="text-align: center; color:white">
+            <h1>HSA Attendance Automator</h1>
+        </div>
+
         <div class="container">
             <form class="form" id="login">
                 <h1 class="form__title">Login</h1>
-                <div class="form__message form__message--error"></div>
+                <div class="form__message form__message--error" style="color:red"></div>
                 <div class="form__input-group">
                     <input type="text" class="form__input" autofocus placeholder="Username or email">
-                    <div class="form__input-error-message"></div>
+                    <div class="form__input-error-message" ></div>
                 </div>
                 <div class="form__input-group">
                     <input type="password" class="form__input" autofocus placeholder="Password">
@@ -29,6 +33,7 @@
                     <a class="form__link" href="./HSA.html" id="linkCreateAccount">Create Account</a>
                 </p>
             </form>
+
             <form class="form form--hidden" id="createAccount">
                 <h1 class="form__title">Create Acccount</h1>
                 <div class="form__message form__message--error"></div>
@@ -37,12 +42,12 @@
                     <div class="form__input-error-message"></div>
                 </div>
                 <div class="form__input-group">
-                    <input type="text" class="form__input" autofocus placeholder="Email Address">
+                    <input type="text" id="signupEmail" class="form__input" autofocus placeholder="Email Address">
                     <div class="form__input-error-message"></div>
                 </div>
                 <div class="form__input-group">
                     <label for="cabinet">Select a cabinet:</label>
-                    <select name="cabinet" id="cabinet" autofocus>
+                    <select name="cabinet" id="cabinet" onchange="" autofocus>
                         <option value="select">Select</option>
                         <option value="communications">Communications</option>
                         <option value="mlpFall">MLP Fall</option>
@@ -52,17 +57,22 @@
                         <option value="president">President</option>
                         <option value="programming">Programming</option>
                         <option value="secretary">Secretary</option>
-                        <option value="Treasury">Treasury</option>
+                        <option value="treasury">Treasury</option>
                     </select>
                     <div class="form__input-error-message"></div>
+                    
 
                 </div>
                 <div class="form__input-group">
                     <label for="position">Select your position:</label>
                     <select name="position" id="position" autofocus>
-                        <option value="select">Select</option>
                     </select>
+                    <p id="demo"></p>
                     
+                </div>
+                <div class="form__input-group">
+                    <input type="password" class="form__input" autofocus placeholder="Password">
+                    <div class="form__input-error-message"></div>
                 </div>
                 <div class="form__input-group">
                     <input type="password" class="form__input" autofocus placeholder="Confirm Password">
@@ -75,6 +85,6 @@
                 </p>
             </form>
         </div>
-        
     </body>
 </html>
+
